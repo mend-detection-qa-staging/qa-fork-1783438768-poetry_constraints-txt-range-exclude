@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "pm": "poetry",
+  "pm_version_tested": "1.8.0",
+  "source_file": "https://github.com/mend-detection-qa/poetry_constraints-txt-range-exclude/blob/main/pyproject.toml",
+  "root": {
+    "name": "poetry-constraints-txt-range-exclude",
+    "version": "0.1.0",
+    "dependencies": [
+      {
+        "name": "requests",
+        "version": "2.32.0",
+        "scope": "main",
+        "direct": true,
+        "dependencies": [
+          {
+            "name": "certifi",
+            "version": "2026.4.22",
+            "scope": "main",
+            "direct": false,
+            "dependencies": []
+          },
+          {
+            "name": "charset-normalizer",
+            "version": "3.4.7",
+            "scope": "main",
+            "direct": false,
+            "dependencies": []
+          },
+          {
+            "name": "idna",
+            "version": "3.15",
+            "scope": "main",
+            "direct": false,
+            "dependencies": []
+          },
+          {
+            "name": "urllib3",
+            "version": "1.26.20",
+            "scope": "main",
+            "direct": false,
+            "mediation": "Capped at the highest 1.x release by `urllib3<2.0` in constraints.txt. poetry.lock (committed) shows urllib3==2.7.0 because Poetry does NOT read constraints.txt natively. Mend applies the range constraint independently of the lockfile. Exact patch may drift as PyPI publishes new 1.x patches; 1.26.20 is the value at probe-authoring time.",
+            "dependencies": []
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "total_packages": 5,
+    "direct_dependencies": 1,
+    "transitive_dependencies": 4,
+    "constraint_applied": "urllib3<2.0 via constraints.txt (range exclude, overlaid on Poetry-resolved tree)",
+    "scopes_included": ["main"],
+    "notes": "poetry.lock diverges from the expected scan output at urllib3 (lock=2.7.0, scan=1.26.x). Exercises range-syntax constraint parser, not exact-pin path."
+  }
+}
