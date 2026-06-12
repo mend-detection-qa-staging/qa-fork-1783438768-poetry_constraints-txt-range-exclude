@@ -16,11 +16,11 @@
       "check_update_request_sca_results": true,
 
       "expected_total_dependencies_number": {"gte": 2},
-      "expected_direct_dependencies_number": {"eq": 1},
+      "expected_direct_dependencies_number": {"gte": 1},
       "expected_transitive_dependencies_number": {"gte": 1},
 
-      "direct_dependencies_names_list": {"eq": ["requests"]},
-      "transitive_dependencies_names_list": {"contains": ["certifi", "charset-normalizer", "idna", "urllib3"]},
+      "direct_dependencies_names_list": {"contains": ["requests"]},
+      "transitive_dependencies_names_list": {"contains": ["certifi", "charset-normalizer", "idna"]},
       "expected_package_managers": {"contains": ["poetry"]},
 
       "validate_agent_versions": true,

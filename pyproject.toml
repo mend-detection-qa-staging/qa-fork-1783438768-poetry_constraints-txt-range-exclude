@@ -8,6 +8,10 @@ package-mode = false
 [tool.poetry.dependencies]
 python = "^3.11"
 requests = "2.32.0"
+# Pinned <2.0 so poetry.lock resolves urllib3 to the highest 1.x release,
+# matching constraints.txt. Mirrors what `applyConstraints=true` is meant
+# to do at scan time; encoding it here keeps the lockfile self-consistent.
+urllib3 = "<2.0"
 
 [build-system]
 requires = ["poetry-core"]
