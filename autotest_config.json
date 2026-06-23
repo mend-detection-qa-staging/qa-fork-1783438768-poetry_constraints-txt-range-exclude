@@ -38,7 +38,7 @@
       },
 
       "expected_dependency_pairs": [
-        {"artifactId": "urllib3", "version": "1.26.20", "groupId": "urllib3"}
+        {"artifactId": "urllib3", "version": "2.7.0", "groupId": "urllib3"}
       ]
     },
 
